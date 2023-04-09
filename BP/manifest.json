@@ -1,0 +1,44 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "§6Darkness & Stealth",
+		"description": "§7Made by iEnis#0244",
+		"min_engine_version": [ 1, 19, 60 ],
+		"uuid": "80c13ad8-973f-486c-9710-5e5c5d3878d7",
+		"version": [ 1, 0, 0 ]
+	},
+	"modules": [
+		{
+            "description": "Scripting Module",
+			"type": "script",
+			"language": "javascript",
+			"uuid": "5906835f-3062-46d8-9770-dffbd2493b63",
+			"entry": "scripts/index.js",
+			"version": [ 1, 0, 0 ]
+		},
+		{
+            "description": "Data Module",
+			"type": "data",
+			"uuid": "c281f01d-7561-4021-a9d8-95f8288385ab",
+			"version": [ 1, 0, 0 ]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "b8c128f6-60c4-4351-a78e-b39441f5bcd2",
+			"version": [ 1, 0, 0 ]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.1.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-gametest",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.0.0-beta"
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "darknessandstealth:iron_dagger"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " #",
+            "S "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:iron_ingot"
+            },
+            "S": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "darknessandstealth:iron_dagger",
+            "count": 1
+        }
+    }
+}

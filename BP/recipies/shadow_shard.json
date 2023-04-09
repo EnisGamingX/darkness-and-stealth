@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "darknessandstealth:shadow_shard"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " # ",
+            "#S#",
+            " # "
+        ],
+        "key": {
+            "#": {
+                "item": "darknessandstealth:shadow_soul"
+            },
+            "S": {
+                "item": "minecraft:echo_shard"
+            }
+        },
+        "result": {
+            "item": "darknessandstealth:shadow_shard",
+            "count": 2
+        }
+    }
+}

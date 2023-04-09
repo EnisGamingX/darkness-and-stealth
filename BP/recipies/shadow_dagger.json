@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "darknessandstealth:shadow_dagger"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " #",
+            "S "
+        ],
+        "key": {
+            "#": {
+                "item": "darknessandstealth:shadow_shard"
+            },
+            "S": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "darknessandstealth:shadow_dagger",
+            "count": 1
+        }
+    }
+}

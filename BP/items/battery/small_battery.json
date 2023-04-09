@@ -1,0 +1,16 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "darknessandstealth:small_battery",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "§bSmall Battery"
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:foil": true
+        }
+    }
+}

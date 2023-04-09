@@ -1,0 +1,24 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "§6Darkness & Stealth",
+		"description": "§7Made by iEnis#0244",
+		"min_engine_version": [ 1, 19, 60 ],
+		"uuid": "b8c128f6-60c4-4351-a78e-b39441f5bcd2",
+		"version": [ 1, 0, 0 ]
+	},
+	"modules": [
+		{
+            "description": "Resource Module",
+			"type": "resources",
+			"uuid": "fe51484c-2ef2-47bd-b8c5-cf970f003b64",
+			"version": [ 1, 0, 0 ]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "80c13ad8-973f-486c-9710-5e5c5d3878d7",
+			"version": [ 1, 0, 0 ]
+		}
+	]
+}
