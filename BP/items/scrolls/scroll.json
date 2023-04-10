@@ -9,6 +9,9 @@
             "minecraft:display_name": {
                 "value": "§6Ancient Scroll"
             },
+            "minecraft:icon": {
+                "texture": "scroll"
+            },
             "minecraft:max_stack_size": 1,
             "minecraft:foil": true
         }

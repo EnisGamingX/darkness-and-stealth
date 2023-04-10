@@ -9,6 +9,9 @@
             "minecraft:display_name": {
                 "value": "Larger Battery (Empty)"
             },
+            "minecraft:icon": {
+                "texture": "larger_battery_empty"
+            },
             "minecraft:max_stack_size": 1
         }
     }

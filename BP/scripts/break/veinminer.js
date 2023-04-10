@@ -1,4 +1,4 @@
-import { world, BlockBreakEvent, Container, Player, Dimension, Vector3, Block, system } from '@minecraft/server'
+import { world, BlockBreakEvent, Container, Player, Dimension, Block, system } from '@minecraft/server'
 import * as config from './config.js'
 import { tickTimeout } from '../libs/delay.js';
 /**
@@ -20,7 +20,7 @@ export function veinminer(data) {
 
 /**
  * 
- * @param {Vector3} initialPos 
+ * @param {{x: number, y: number, z: number}} initialPos 
  * @param {Dimension} dim
  */
 function breaker(initialPos, dim) {

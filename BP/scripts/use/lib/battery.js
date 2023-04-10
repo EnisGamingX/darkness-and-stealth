@@ -1,4 +1,29 @@
-import { world, Player, BeforeItemUseEvent, Container, BeforeChatEvent } from '@minecraft/server';
+import { world, Player, BeforeItemUseEvent, Container } from '@minecraft/server';
+
+class loreItem {
+    constructor(id, lore) {
+        this.id = id;
+        this.lore = lore;
+    }
+}
+
+const items = [
+    new loreItem("id", ["lore"])
+]
+
+let batteries = [
+    [
+        "darknessandstealth:small_battery_empty",
+        "darknessandstealth:larger_battery_empty",
+        "darknessandstealth:large_battery_empty"
+    ],
+    [
+        "darknessandstealth:infinite_battery",
+        "darknessandstealth:large_battery",
+        "darknessandstealth:larger_battery",
+        "darknessandstealth:small_battery"
+    ]
+]
 
 /**
  * @param {BeforeItemUseEvent} data 
@@ -9,36 +34,36 @@ function setBattery(data, size) {
     /**
      * @type {Container}
      */
-    let container = player.hasComponent("minecraft:inventory")
+    let container = player.getComponent("minecraft:inventory").container
     let lore = container.getItem(player.selectedSlot).getLore()[0]
-    let me = parseInt(lore.replace(`${lore[0]}${lore[1]}`, ""))
+    if (lore == undefined && data.item.typeId !== "darknessandstealth:infinite_battery") return;
+    let de; try { de = parseInt(lore.replace(`${lore[0]}${lore[1]}${lore[2]}${lore[3]}`, "").replace("Dark Energy [DE]")) } catch (e) { }
     container.clearItem(player.selectedSlot)
-    if (size == -1) { player.setDynamicProperty("me", -1) }
-    else { player.setDynamicProperty("me", me) }
+    if (size == -1) { player.setDynamicProperty("de", -1) }
+    else { player.setDynamicProperty("de", de) }
     player.setDynamicProperty("battery", size)
+    world.playSound("mob.horse.armor", {"location": player.location, "volume": 0.8})
 }
 
 /**
- * @param {BeforeChatEvent} data
+ * @param {BeforeItemUseEvent} data
  */
 export function battery(data) {
-    if ((!data.source.getDynamicProperty("battery") == 0) || (data.source.getDynamicProperty("battery") == undefined)) {
-        /**
-         * @type Player
-         */
-        let player = data.source;
-        player.sendMessage("§cYou can't equip two Batteries");
+    let size = data.source.getDynamicProperty("battery")
+    let de = data.source.getDynamicProperty("de")
+    /**
+     * @type {Player}
+     */
+    let player = data.source;
+    if (!batteries[0].includes(data.item.typeId) && !batteries[1].includes(data.item.typeId)) {
+        return;
     }
-    else if (data.item.typeId.startsWith("darknessandstealth:") &&
-        data.item.typeId.endsWith("_battery_empty")) {
-        /**
-         * @type Player
-         */
-        let player = data.source;
-        player.sendMessage("§cYou can't equip an Empty Battery");
+    else if (size !== undefined && size !== 0) {
+        return player.sendMessage("§cYou can't equip two Batteries");
     }
-    else if (!data.item.typeId.startsWith("darknessandstealth:") &&
-        !data.item.typeId.endsWith("_battery")) { return };
+    else if (batteries[0].includes(data.item.typeId)) {
+        return player.sendMessage("§cYou can't equip an Empty Battery");
+    }
 
     if (data.item.typeId == "darknessandstealth:small_battery") {
         setBattery(data, 1)

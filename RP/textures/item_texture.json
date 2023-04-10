@@ -1,0 +1,39 @@
+{
+	"resource_pack_name": "darknessandstealth",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"battery_cell": {
+			"textures": "textures/items/batteries/battery_cell"
+		},
+		"small_battery_empty": {
+			"textures": "textures/items/batteries/small_battery_empty"
+		},
+		"larger_battery_empty": {
+			"textures": "textures/items/batteries/larger_battery_empty"
+		},
+		"large_battery_empty": {
+			"textures": "textures/items/batteries/large_battery_empty"
+		},
+		"small_battery": {
+			"textures": "textures/items/batteries/small_battery"
+		},
+		"larger_battery": {
+			"textures": "textures/items/batteries/larger_battery"
+		},
+		"large_battery": {
+			"textures": "textures/items/batteries/large_battery"
+		},
+		"infinite_battery": {
+			"textures": "textures/items/batteries/infinite_battery"
+		},
+		"scroll": {
+			"textures": "textures/items/scrolls/scroll"
+		},
+		"empty_scroll": {
+			"textures": "textures/items/scrolls/empty_scroll"
+		},
+		"controller": {
+			"textures": "textures/items/controller"
+		}
+	}
+}

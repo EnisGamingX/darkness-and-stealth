@@ -9,6 +9,9 @@
             "minecraft:display_name": {
                 "value": "Small Battery (Empty)"
             },
+            "minecraft:icon": {
+                "texture": "small_battery_empty"
+            },
             "minecraft:max_stack_size": 1
         }
     }

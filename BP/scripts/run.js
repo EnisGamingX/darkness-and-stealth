@@ -1,9 +1,13 @@
-import { world } from "@minecraft/server";
+import { world, Container } from "@minecraft/server";
 
 world.events.beforeChat.subscribe((data) => {
-    if (!data.message.toLocaleLowerCase().startsWith("#runscript")) return;
     data.cancel = true;
     let player = data.sender;
-    try { player.sendMessage(JSON.stringify(eval(data.message))) }
-    catch (e) { player.sendMessage("§cError:§r\n" + JSON.stringify(e)) }
+    /**
+     * @type {Container}
+     */
+    let container = player.getComponent("inventory").container;
+    let item = container.getItem(player.selectedSlot);
+    item.setLore([`§r§3` + data.message + " Dark Energy [DE]"])
+    container.setItem(player.selectedSlot, item)
 })

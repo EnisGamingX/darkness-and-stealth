@@ -9,6 +9,9 @@
             "minecraft:display_name": {
                 "value": "§bLarger Battery"
             },
+            "minecraft:icon": {
+                "texture": "larger_battery"
+            },
             "minecraft:max_stack_size": 1,
             "minecraft:foil": true
         }
